@@ -1,0 +1,49 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-2"></div>
+        <div class="col-md-8 mb-6">
+            <mat-card class="example-card mt-5">
+
+                <div class="row">
+                    <div class="col-md-1">
+                        <button mat-mini-fab color="primary">
+                            <mat-icon aria-hidden="false" aria-label="Example home icon" [routerLink]="['/']" routerLinkActive="router-link-active" >arrow_back</mat-icon>
+                        </button>
+                    </div>
+                    <div class="col-md-8">
+                        <mat-card-header>
+                            <div mat-card-avatar class="example-header-image"></div>
+                            <mat-card-title>User Login</mat-card-title>
+                        </mat-card-header>
+                    </div>
+                </div>
+
+                <mat-card-content>
+                    <form class="example-form" (ngSubmit)="checkUser()" [formGroup]="login_Form">
+                        <mat-card class="example-card mt">
+                            <mat-form-field class="example-full-width">
+                                <mat-label>Email</mat-label>
+                                <input matInput formControlName="email">
+                            </mat-form-field>
+
+                            <mat-form-field class="example-full-width">
+                                <mat-label>Password</mat-label>
+                                <input matInput type="password" formControlName="password">
+                            </mat-form-field>
+                            <mat-card-actions class="text-right">
+                                <button mat-raised-button type="submit" color="primary">Save</button>
+                                <button mat-raised-button type="reset" color="accent">Cancel</button>
+                            </mat-card-actions>
+                        </mat-card>
+
+
+                    </form>
+                </mat-card-content>
+
+            </mat-card>
+        </div>
+    </div>
+
+
+
+</div>
